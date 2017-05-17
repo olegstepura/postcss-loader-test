@@ -1,7 +1,7 @@
 # postcss-loader-test
 Test repo for `postcss-loader` to help debugging issues after upgrade of `postcss-loader` from version `1.3.3` to `2.0.5` [see #232]( https://github.com/postcss/postcss-loader/issues/232)
 
-Summary:
+## Summary:
 
 The only change between two versions below is an edit in [`package.json`:](https://github.com/olegstepura/postcss-loader-test/blob/master/package.json#L61)
 ```diff
