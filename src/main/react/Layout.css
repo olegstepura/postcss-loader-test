@@ -1,0 +1,12 @@
+@import "react-toolbox/lib/colors.css";
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--palette-grey-200);
+}
+
+/* http://stackoverflow.com/questions/5939341/firefox-4-is-there-a-way-to-remove-the-red-border-in-a-required-form-input */
+input:required {
+  box-shadow: none;
+}
