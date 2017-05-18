@@ -65,7 +65,12 @@ const settings = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          {
+            loader: 'style-loader',
+            options: {
+              sourceMap: true
+            }
+          },
           {
             loader: 'css-loader',
             options: {
@@ -78,9 +83,9 @@ const settings = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: false
+              sourceMap: true
             }
-          } // has separate config nearby
+          } // has separate PostCSS config nearby
         ]
       },
     ]
