@@ -1,15 +1,36 @@
 module.exports = context => ({
-  sourceMap: false,
+  map: {
+    sourcesContent: false,
+    inline: false
+  },
   plugins: {
     'postcss-import': {
       path: [
         'node_modules',
         'src/main/react', // allows importing modules using absolute path, @see https://goo.gl/luH0Xa
-      ]
+      ],
+      map: {
+        sourcesContent: false,
+        inline: false
+      },
     },
-    'postcss-mixins': {},
-    'postcss-each': {},
+    'postcss-mixins': {
+      map: {
+        sourcesContent: false,
+        inline: false
+      },
+    },
+    'postcss-each': {
+      map: {
+        sourcesContent: false,
+        inline: false
+      },
+    },
     'postcss-cssnext': {
+      map: {
+        sourcesContent: false,
+        inline: false
+      },
       features: {
         customProperties: {
           variables: {
