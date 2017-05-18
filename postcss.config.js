@@ -1,7 +1,5 @@
 module.exports = context => ({
-  options: {
-    sourceMap: true
-  },
+  sourceMap: false,
   plugins: {
     'postcss-import': {
       path: [
