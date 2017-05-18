@@ -68,14 +68,14 @@ const settings = {
           {
             loader: 'style-loader',
             options: {
-              sourceMap: false
+              sourceMap: true
             }
           },
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              sourceMap: false,
+              sourceMap: true,
               importLoaders: 1,
               localIdentName: dev('[name]--[local]--[hash:base64:5]').prod('[hash:base64]')
             }
@@ -83,7 +83,7 @@ const settings = {
           {
             loader: 'postcss-loader',
             options: {
-              sourceMap: false
+              sourceMap: true
             }
           } // has separate PostCSS config nearby
         ]
