@@ -75,7 +75,12 @@ const settings = {
               localIdentName: dev('[name]--[local]--[hash:base64:5]').prod('[hash:base64]')
             }
           },
-          'postcss-loader' // has separate config nearby
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: false
+            }
+          } // has separate config nearby
         ]
       },
     ]
