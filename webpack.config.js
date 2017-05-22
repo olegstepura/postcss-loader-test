@@ -67,27 +67,16 @@ const settings = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-            options: {
-              sourceMap: true
-            }
-          },
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
               modules: true,
-              sourceMap: true,
               importLoaders: 1,
               localIdentName: dev('[name]--[local]--[hash:base64:5]').prod('[hash:base64]')
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: true
-            }
-          } // has separate PostCSS config nearby
+          'postcss-loader' // has separate PostCSS config nearby
         ]
       },
     ]
