@@ -39,7 +39,7 @@ const settings = {
       'src/main/react', // allows importing modules using absolute path, @see https://goo.gl/luH0Xa
     ]
   },
-  devtool: dev('eval-source-map').prod('source-map'), // this emits sources while development making it easier to debug
+  devtool: 'source-map', // this emits sources while development making it easier to debug
   module: {
     rules: [
       {
