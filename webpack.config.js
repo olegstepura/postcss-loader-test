@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const noop = () => {}
 // simple DSL to allow writing simple switch: `dev('dev setting').prod('prod setting')`
@@ -27,6 +28,7 @@ const settings = {
   },
   output: {
     filename: '[name].js',
+    sourceMapFilename: '[name].js.map',
     publicPath: dev(`http://localhost:${webpackPort}/asset/`).prod('/asset/'),
     path: path.resolve('src/main/webapp/asset')
   },
@@ -100,7 +102,8 @@ const settings = {
   },
   plugins: [
     dev(new webpack.HotModuleReplacementPlugin()).prod(noop),
-    dev(new webpack.NamedModulesPlugin()).prod(noop)
+    dev(new webpack.NamedModulesPlugin()).prod(noop),
+    new ExtractTextPlugin('styles.css')
   ]
 };
 
